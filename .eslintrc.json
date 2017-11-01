@@ -8,6 +8,13 @@
   "rules": {
     "react/jsx-filename-extension": 0,
     "no-use-before-define": 0,
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "aspects": ["invalidHref"]
+      }
+    ],
     "react/prop-types": 0,
     "max-len": [1, 150],
     "import/first": 0,
