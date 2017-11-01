@@ -17,6 +17,7 @@
     ],
     "react/prop-types": 0,
     "max-len": [1, 150],
+    "linebreak-style": ["error", "unix"],
     "import/first": 0,
     "no-tabs": 0,
     "indent": ["warn"],
