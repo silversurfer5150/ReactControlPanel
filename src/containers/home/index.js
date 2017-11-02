@@ -6,30 +6,37 @@ import { increment, incrementAsync, decrement, decrementAsync } from '../../redu
 
 const Home = props => (
   <div>
-    <h1>Home</h1>
-    <p>Count: {props.count}</p>
+    <h1>Welcome Will</h1>
+    <div className="panel panel-default">
+      <div className="panel-heading">
+        <h3 className="panel-title">Panel primary</h3>
+      </div>
+      <div className="panel-body">
+        <p>Count: {props.count}</p>
 
-    <p>
-      <button onClick={props.increment} disabled={props.isIncrementing}>
-        Increment
-      </button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>
-        Increment Async
-      </button>
-    </p>
+        <p>
+          <button onClick={props.increment} disabled={props.isIncrementing}>
+            Increment
+          </button>
+          <button onClick={props.incrementAsync} disabled={props.isIncrementing}>
+            Increment Async
+          </button>
+        </p>
 
-    <p>
-      <button onClick={props.decrement} disabled={props.isDecrementing}>
-        Decrement
-      </button>
-      <button onClick={props.decrementAsync} disabled={props.isDecrementing}>
-        Decrement Async
-      </button>
-    </p>
+        <p>
+          <button onClick={props.decrement} disabled={props.isDecrementing}>
+            Decrement
+          </button>
+          <button onClick={props.decrementAsync} disabled={props.isDecrementing}>
+            Decrement Async
+          </button>
+        </p>
 
-    <p>
-      <button onClick={() => props.changePage()}>Go to about page via redux</button>
-    </p>
+        <p>
+          <button onClick={() => props.changePage()}>Go to about page via redux</button>
+        </p>
+      </div>
+    </div>
   </div>
 );
 
