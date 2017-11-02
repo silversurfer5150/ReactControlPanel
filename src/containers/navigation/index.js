@@ -6,10 +6,10 @@ import { collapseLeadspace, expandLeadspace } from '../../reducers/panel';
 
 const Navigation = props => (
   <div className="db-navigation">
-    <Link href="/" to="/">
+    <Link href="/" to="/" onClick={props.expandLeadspace}>
       Dashboard Home
     </Link>
-    <Link href="/" to="/about-us">
+    <Link href="/" to="/about-us" onClick={props.expandLeadspace}>
       About This Project
     </Link>
     <p className="db-nav-buttons">

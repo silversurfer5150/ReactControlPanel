@@ -20,10 +20,17 @@ button:disabled {
   -moz-transition: max-height 0.8s;
   transition: max-height 0.8s; }
   .db-leadspace.jumbotron.db-leadspace-collapse {
-    color: red;
     max-height: 150px; }
     .db-leadspace.jumbotron.db-leadspace-collapse h1 {
-      font-size: 10px; }
+      font-size: 2.3em;
+      display: inline;
+      vertical-align: middle;
+      margin-left: 10px; }
+
+.db-leadspace.jumbotron h1 {
+  -webkit-transition: font-size 0.3s;
+  -moz-transition: font-size 0.3s;
+  transition: font-size 0.3s; }
 
 .db-navigation button:not(:first-child),
 .db-navigation a:not(:first-child) {
