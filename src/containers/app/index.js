@@ -11,7 +11,7 @@ import Search from '../panels/search';
 import { Route } from 'react-router-dom';
 
 const App = () => (
-  <div className="container theme-showcase">
+  <div className="container">
     <header>
       <Leadspace />
       <Navigation />

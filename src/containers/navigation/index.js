@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { collapseLeadspace, expandLeadspace } from '../../reducers/panel';
 
-const Navigation = () => (
+const Navigation = props => (
   <div className="db-navigation">
     <Link href="/" to="/">
       Dashboard Home
@@ -10,12 +13,12 @@ const Navigation = () => (
       About This Project
     </Link>
     <p className="db-nav-buttons">
-      <Link href="/" to="/">
+      <Link href="/" to="/" onClick={props.expandLeadspace}>
         <button type="button" className="btn btn-lg btn-default">
           Welcome
         </button>
       </Link>
-      <Link href="/" to="/gmail">
+      <Link href="/" to="/gmail" onClick={props.collapseLeadspace}>
         <button type="button" className="btn btn-lg btn-primary">
           GMail
         </button>
@@ -44,4 +47,17 @@ const Navigation = () => (
   </div>
 );
 
-export default Navigation;
+const mapStateToProps = state => ({
+  collapse: state.panel.collapse,
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      collapseLeadspace,
+      expandLeadspace,
+    },
+    dispatch,
+  );
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation);

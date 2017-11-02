@@ -1,5 +1,7 @@
 /* main sass styles for application */
 
+$coreColor: yellowgreen;
+
 html {
   font-size: 100%;
 }
@@ -11,7 +13,7 @@ body {
     sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: yellowgreen;
+  color: $coreColor;
 }
 
 button:disabled {
@@ -20,6 +22,17 @@ button:disabled {
 
 .db-leadspace.jumbotron {
   padding-bottom: 5px;
+  max-height: 500px;
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+  &.db-leadspace-collapse {
+    color: red;
+    max-height: 150px;
+    h1 {
+      font-size: 10px;
+    }
+  }
 }
 
 .db-navigation {
