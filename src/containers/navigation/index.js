@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { collapseLeadspace, expandLeadspace } from '../../reducers/panel';
+import { collapseLeadspace, expandLeadspace } from '../../actions';
 
 const Navigation = props => (
   <div className="db-navigation">

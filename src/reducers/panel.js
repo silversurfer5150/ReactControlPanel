@@ -1,5 +1,4 @@
-export const COLLAPSE_LEADSPACE = 'panel/COLLAPSE_LEADSPACE';
-export const EXPAND_LEADSPACE = 'panel/EXPAND_LEADSPACE';
+import { COLLAPSE_LEADSPACE, EXPAND_LEADSPACE } from '../actions/types';
 
 const initialState = {
   collapse: false,
@@ -22,16 +21,4 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-};
-
-export const collapseLeadspace = () => (dispatch) => {
-  dispatch({
-    type: COLLAPSE_LEADSPACE,
-  });
-};
-
-export const expandLeadspace = () => (dispatch) => {
-  dispatch({
-    type: EXPAND_LEADSPACE,
-  });
 };
