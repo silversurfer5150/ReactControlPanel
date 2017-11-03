@@ -9,10 +9,9 @@ import Drive from '../panels/drive';
 import Facebook from '../panels/facebook';
 import Search from '../panels/search';
 import { Route } from 'react-router-dom';
-import { connect } from 'react-redux';
 
-const App = props => (
-  <div className={`container ${props.panelType}`}>
+const App = () => (
+  <div className="container">
     <header>
       <Leadspace />
       <Navigation />
@@ -29,8 +28,4 @@ const App = props => (
   </div>
 );
 
-const mapStateToProps = state => ({
-  panelType: state.panel.panelType,
-});
-
-export default connect(mapStateToProps)(App);
+export default App;

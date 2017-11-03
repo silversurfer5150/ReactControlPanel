@@ -5,9 +5,15 @@ import { connect } from 'react-redux';
 import { collapseLeadspace, expandLeadspace } from '../../actions';
 
 const switchPanel = (props, e) => {
-  e.preventDefault();
   const panelType = e.target.classList[2].split('btn-')[1];
-  props.collapseLeadspace(panelType);
+  panelType === 'default' ? props.expandLeadspace(panelType) : props.collapseLeadspace(panelType);
+  const buttons = document.querySelectorAll('.btn-lg');
+
+  [].forEach.call(buttons, (button) => {
+    // do whatever
+    button.classList.remove('db-active-panel');
+  });
+  e.target.classList.add('db-active-panel');
 };
 
 const Navigation = props => (
@@ -20,12 +26,12 @@ const Navigation = props => (
     </Link>
     <p className="db-nav-buttons">
       <Link href="/" to="/" onClick={props.expandLeadspace}>
-        <button type="button" className="btn btn-lg btn-default">
+        <button type="button" className="btn btn-lg btn-default db-active-panel">
           Welcome
         </button>
       </Link>
-      <Link href="/" to="/gmail" onClick={e => switchPanel(props, e)}>
-        <button type="button" className="btn btn-lg btn-primary">
+      <Link href="/" to="/gmail">
+        <button type="button" className="btn btn-lg btn-primary" onClick={e => switchPanel(props, e)}>
           GMail
         </button>
       </Link>

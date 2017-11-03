@@ -1,6 +1,12 @@
 /* main sass styles for application */
 
 $coreColor: yellowgreen;
+$default: yellow;
+$gmail: #2a9fd6;
+$photos: #77b300;
+$drive: #9933cc;
+$facebook: #ff8800;
+$search: #cc0000;
 
 html {
   font-size: 100%;
@@ -26,7 +32,25 @@ button:disabled {
   -webkit-transition: max-height 0.8s;
   -moz-transition: max-height 0.8s;
   transition: max-height 0.8s;
+  &.default {
+    color: $default;
+  }
   &.db-leadspace-collapse {
+    &.primary {
+      color: $gmail;
+    }
+    &.success {
+      color: $photos;
+    }
+    &.info {
+      color: $drive;
+    }
+    &.warning {
+      color: $facebook;
+    }
+    &.danger {
+      color: $search;
+    }
     max-height: 150px;
     h1 {
       font-size: 2.3em;
@@ -34,6 +58,18 @@ button:disabled {
       vertical-align: middle;
       margin-left: 10px;
     }
+  }
+}
+
+.btn-default,
+.btn-primary,
+.btn-info,
+.btn-success,
+.btn-warning,
+.btn-danger {
+  opacity: 0.3;
+  &.db-active-panel {
+    opacity: 1;
   }
 }
 
@@ -52,4 +88,12 @@ button:disabled {
 
 .db-nav-buttons {
   margin-top: 30px;
+}
+
+.panel {
+  margin-top: 30px;
+  p {
+    color: white;
+    font-size: 1.1em;
+  }
 }

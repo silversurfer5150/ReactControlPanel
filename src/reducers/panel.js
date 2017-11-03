@@ -18,6 +18,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         collapse: false,
+        panelType: 'default',
       };
 
     default:

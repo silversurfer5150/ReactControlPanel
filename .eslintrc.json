@@ -16,6 +16,12 @@
       }
     ],
     "react/prop-types": 0,
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTernary": true
+      }
+    ],
     "max-len": [1, 150],
     "linebreak-style": ["error", "unix"],
     "import/first": 0,

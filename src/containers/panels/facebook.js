@@ -1,10 +1,19 @@
 import React from 'react';
 
 const Facebook = () => (
-  <div>
-    <h1>Facebook</h1>
-    <p>Mini dashboard is a mashup application which allows access to all of the things you use on a day to day basis in the same place.</p>
-    <p>It combines elements from Google, Facebook, Microsoft and eliminates the need for visiting them separately.</p>
+  <div className="panel panel-warning">
+    <div className="panel-heading">
+      <h2 className="panel-title">Facebook</h2>
+    </div>
+    <div className="panel-body">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.
+      </p>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
   </div>
 );
 

@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 
 const Leadspace = props => (
   <div>
-    <div className={!props.collapse ? 'db-leadspace jumbotron' : 'db-leadspace jumbotron db-leadspace-collapse'}>
+    <div
+      className={!props.collapse ? `db-leadspace jumbotron ${props.panelType}` : `db-leadspace jumbotron db-leadspace-collapse ${props.panelType}`}
+    >
       <img src={mainLogo} alt="my Dashboard" />
       <h1>My Dashboard</h1>
       <p>All of the things you need, easy to find in one place.</p>
@@ -14,7 +16,7 @@ const Leadspace = props => (
 
 const mapStateToProps = state => ({
   collapse: state.panel.collapse,
-  panel: state.panel.panel,
+  panelType: state.panel.panelType,
 });
 
-export default connect(mapStateToProps)(Leadspace);
+export default connect(mapStateToProps, null)(Leadspace);

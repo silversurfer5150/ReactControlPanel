@@ -19,13 +19,40 @@ button:disabled {
   -webkit-transition: max-height 0.8s;
   -moz-transition: max-height 0.8s;
   transition: max-height 0.8s; }
+  .db-leadspace.jumbotron.default {
+    color: yellow; }
   .db-leadspace.jumbotron.db-leadspace-collapse {
     max-height: 150px; }
+    .db-leadspace.jumbotron.db-leadspace-collapse.primary {
+      color: #2a9fd6; }
+    .db-leadspace.jumbotron.db-leadspace-collapse.success {
+      color: #77b300; }
+    .db-leadspace.jumbotron.db-leadspace-collapse.info {
+      color: #9933cc; }
+    .db-leadspace.jumbotron.db-leadspace-collapse.warning {
+      color: #ff8800; }
+    .db-leadspace.jumbotron.db-leadspace-collapse.danger {
+      color: #cc0000; }
     .db-leadspace.jumbotron.db-leadspace-collapse h1 {
       font-size: 2.3em;
       display: inline;
       vertical-align: middle;
       margin-left: 10px; }
+
+.btn-default,
+.btn-primary,
+.btn-info,
+.btn-success,
+.btn-warning,
+.btn-danger {
+  opacity: 0.3; }
+  .btn-default.db-active-panel,
+  .btn-primary.db-active-panel,
+  .btn-info.db-active-panel,
+  .btn-success.db-active-panel,
+  .btn-warning.db-active-panel,
+  .btn-danger.db-active-panel {
+    opacity: 1; }
 
 .db-leadspace.jumbotron h1 {
   -webkit-transition: font-size 0.3s;
@@ -38,3 +65,9 @@ button:disabled {
 
 .db-nav-buttons {
   margin-top: 30px; }
+
+.panel {
+  margin-top: 30px; }
+  .panel p {
+    color: white;
+    font-size: 1.1em; }
