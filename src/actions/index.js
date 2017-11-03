@@ -1,8 +1,9 @@
 import { COLLAPSE_LEADSPACE, EXPAND_LEADSPACE } from './types';
 
-export const collapseLeadspace = () => (dispatch) => {
+export const collapseLeadspace = panel => (dispatch) => {
   dispatch({
     type: COLLAPSE_LEADSPACE,
+    payload: panel,
   });
 };
 

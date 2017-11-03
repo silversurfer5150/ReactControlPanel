@@ -2,6 +2,7 @@ import { COLLAPSE_LEADSPACE, EXPAND_LEADSPACE } from '../actions/types';
 
 const initialState = {
   collapse: false,
+  panelType: 'default',
 };
 
 export default (state = initialState, action) => {
@@ -10,6 +11,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         collapse: true,
+        panelType: action.payload,
       };
 
     case EXPAND_LEADSPACE:

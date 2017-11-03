@@ -14,6 +14,7 @@ const Leadspace = props => (
 
 const mapStateToProps = state => ({
   collapse: state.panel.collapse,
+  panel: state.panel.panel,
 });
 
 export default connect(mapStateToProps)(Leadspace);
