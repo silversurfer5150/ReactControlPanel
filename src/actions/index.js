@@ -1,4 +1,4 @@
-import { COLLAPSE_LEADSPACE, EXPAND_LEADSPACE } from './types';
+import { COLLAPSE_LEADSPACE, EXPAND_LEADSPACE, SWITCH_PANEL } from './types';
 
 export const collapseLeadspace = panel => (dispatch) => {
   dispatch({
@@ -10,5 +10,12 @@ export const collapseLeadspace = panel => (dispatch) => {
 export const expandLeadspace = () => (dispatch) => {
   dispatch({
     type: EXPAND_LEADSPACE,
+  });
+};
+
+export const switchPanel = tabs => (dispatch) => {
+  dispatch({
+    type: SWITCH_PANEL,
+    payload: tabs,
   });
 };
