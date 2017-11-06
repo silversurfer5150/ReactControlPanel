@@ -36,19 +36,19 @@ button:disabled {
     color: $default;
   }
   &.db-leadspace-collapse {
-    &.db-tab-GMail {
+    &.gmail {
       color: $gmail;
     }
-    &.db-tab-Photos {
+    &.photos {
       color: $photos;
     }
-    &.db-tab-Drive {
+    &.drive {
       color: $drive;
     }
-    &.db-tab-Facebook {
+    &.facebook {
       color: $facebook;
     }
-    &.db-tab-Google {
+    &.search {
       color: $search;
     }
     max-height: 150px;

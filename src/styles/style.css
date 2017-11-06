@@ -23,15 +23,15 @@ button:disabled {
     color: yellow; }
   .db-leadspace.jumbotron.db-leadspace-collapse {
     max-height: 150px; }
-    .db-leadspace.jumbotron.db-leadspace-collapse.db-tab-GMail {
+    .db-leadspace.jumbotron.db-leadspace-collapse.gmail {
       color: #2a9fd6; }
-    .db-leadspace.jumbotron.db-leadspace-collapse.db-tab-Photos {
+    .db-leadspace.jumbotron.db-leadspace-collapse.photos {
       color: #77b300; }
-    .db-leadspace.jumbotron.db-leadspace-collapse.db-tab-Drive {
+    .db-leadspace.jumbotron.db-leadspace-collapse.drive {
       color: #9933cc; }
-    .db-leadspace.jumbotron.db-leadspace-collapse.db-tab-Facebook {
+    .db-leadspace.jumbotron.db-leadspace-collapse.facebook {
       color: #ff8800; }
-    .db-leadspace.jumbotron.db-leadspace-collapse.db-tab-Google {
+    .db-leadspace.jumbotron.db-leadspace-collapse.search {
       color: #cc0000; }
     .db-leadspace.jumbotron.db-leadspace-collapse h1 {
       font-size: 2.3em;
