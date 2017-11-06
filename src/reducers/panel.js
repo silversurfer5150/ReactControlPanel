@@ -5,11 +5,11 @@ const initialState = {
   panelType: 'default',
   tabs: [
     { name: 'Welcome', class: 'btn-default', path: '/', selected: true },
-    { name: 'GMail', class: 'btn-primary', path: 'gmail', selected: false },
-    { name: 'Photos', class: 'btn-success', path: 'photos', selected: false },
-    { name: 'Drive', class: 'btn-info', path: 'drive', selected: false },
-    { name: 'Facebook', class: 'btn-warning', path: 'facebook', selected: false },
-    { name: 'Google', class: 'btn-danger', path: 'search', selected: false },
+    { name: 'GMail', class: 'btn-primary', path: '/gmail', selected: false },
+    { name: 'Photos', class: 'btn-success', path: '/photos', selected: false },
+    { name: 'Drive', class: 'btn-info', path: '/drive', selected: false },
+    { name: 'Facebook', class: 'btn-warning', path: '/facebook', selected: false },
+    { name: 'Google', class: 'btn-danger', path: '/search', selected: false },
   ],
 };
 
