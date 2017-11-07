@@ -1,5 +1,7 @@
-import { COLLAPSE_LEADSPACE, EXPAND_LEADSPACE, SWITCH_PANEL } from '../actions/types';
+import { COLLAPSE_LEADSPACE, EXPAND_LEADSPACE } from '../actions/types';
 
+// Panel reducer
+// initial state holds collapse / expand state for leadspace, panelType for styling and data for tab components.
 const initialState = {
   collapse: false,
   panelType: 'default',
@@ -27,12 +29,6 @@ export default (state = initialState, action) => {
         ...state,
         collapse: false,
         panelType: 'default',
-      };
-
-    case SWITCH_PANEL:
-      return {
-        ...state,
-        tabs: action.payload,
       };
 
     default:

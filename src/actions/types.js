@@ -1,3 +1,2 @@
-export const COLLAPSE_LEADSPACE = 'COLLAPSE_LEADSPACE';
-export const EXPAND_LEADSPACE = 'EXPAND_LEADSPACE';
-export const SWITCH_PANEL = 'SWITCH_PANEL';
+export const COLLAPSE_LEADSPACE = 'Collapse Leadspace - Switch Panel';
+export const EXPAND_LEADSPACE = 'Expand Leadspace - Default Panel';

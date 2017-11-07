@@ -1,7 +1,8 @@
 import React from 'react';
-import mainLogo from '../../images/dashboardLogo.png';
+import mainLogo from '../images/dashboardLogo.png';
 import { connect } from 'react-redux';
 
+// receives the panelType and collapse state and behaves accordingly
 const Leadspace = props => (
   <div>
     <div

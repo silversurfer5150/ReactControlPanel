@@ -1,5 +1,6 @@
-import { COLLAPSE_LEADSPACE, EXPAND_LEADSPACE, SWITCH_PANEL } from './types';
+import { COLLAPSE_LEADSPACE, EXPAND_LEADSPACE } from './types';
 
+// collapse the leadspace and change the panel type in store
 export const collapseLeadspace = panel => (dispatch) => {
   dispatch({
     type: COLLAPSE_LEADSPACE,
@@ -7,15 +8,9 @@ export const collapseLeadspace = panel => (dispatch) => {
   });
 };
 
+// expand the leadspace, (default panel always set in reducer)
 export const expandLeadspace = () => (dispatch) => {
   dispatch({
     type: EXPAND_LEADSPACE,
-  });
-};
-
-export const switchPanel = tabs => (dispatch) => {
-  dispatch({
-    type: SWITCH_PANEL,
-    payload: tabs,
   });
 };
