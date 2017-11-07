@@ -1,39 +1,39 @@
 import React from 'react';
-import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { increment, incrementAsync, decrement, decrementAsync } from '../../reducers/counter';
+import { makeApiCall } from '../../actions/';
+import LocationData from '../../components/locationdata';
 
-const Home = props => (
-  <div>
-    <h1>Welcome Will</h1>
-    <div className="panel panel-default">
-      <div className="panel-heading">
-        <h3 className="panel-title">Panel primary</h3>
+class Home extends React.Component {
+  // OnMount dispatch collapse state depending on url path and panel type also
+  componentDidMount() {
+    this.props.makeApiCall('http://api.openweathermap.org/data/2.5/weather?q=bratislava,sk&appid=938c02687efb071eb7aab8b854b0d392');
+  }
+  render() {
+    return (
+      <div>
+        <h1>Welcome Will</h1>
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">Panel primary</h3>
+          </div>
+          <div className="panel-body">
+            <LocationData />
+          </div>
+        </div>
       </div>
-      <div className="panel-body">
-        <p>
-          <button onClick={() => props.changePage()}>Go to about page via redux</button>
-        </p>
-      </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 const mapStateToProps = state => ({
-  count: state.counter.count,
-  isIncrementing: state.counter.isIncrementing,
-  isDecrementing: state.counter.isDecrementing,
+  homeData: state.async.homeData,
 });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      increment,
-      incrementAsync,
-      decrement,
-      decrementAsync,
-      changePage: () => push('/about-us'),
+      makeApiCall,
     },
     dispatch,
   );
