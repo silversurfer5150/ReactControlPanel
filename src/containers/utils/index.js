@@ -2,4 +2,4 @@
 
 export const getPanelTypeFromPath = path => (path === '/' ? 'default' : path.replace(/^\/+/g, ''));
 
-export const getPanelTypeFromPath2 = () => {};
+export const getCelciusFromKelvin = kelvin => (kelvin - 273.15).toFixed(2);

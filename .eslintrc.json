@@ -23,6 +23,12 @@
         "allowTernary": true
       }
     ],
+    "no-confusing-arrow": [
+      "warn",
+      {
+        "allowParens": true
+      }
+    ],
     "max-len": [1, 150],
     "linebreak-style": ["error", "unix"],
     "import/first": 0,

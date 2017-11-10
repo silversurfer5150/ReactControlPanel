@@ -6,6 +6,7 @@ const initialState = {
   homeData: {},
   error: '',
   isLoading: false,
+  apiUrl: '',
 };
 
 export default (state = initialState, action) => {
@@ -14,6 +15,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         isLoading: true,
+        apiUrl: action.payload,
       };
 
     case REQUEST_SUCCEEDED:

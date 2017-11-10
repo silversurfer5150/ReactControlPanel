@@ -16,11 +16,30 @@ export const expandLeadspace = () => (dispatch) => {
 };
 
 // call the API data
-export const makeApiCall = url => (dispatch) => {
-  dispatch({ type: REQUEST_STARTED });
+export const callLocationData = () => (dispatch) => {
+  // Get the user's location from API, city name and country code
+  const locationUrl = 'http://ip-api.com/json';
 
-  fetch(url)
-    .then(response => response.json())
-    .then(json => dispatch({ type: REQUEST_SUCCEEDED, payload: json }))
-    .catch(error => dispatch({ type: REQUEST_FAILED, error }));
+  // dispatch call location action
+  dispatch({ type: REQUEST_STARTED, payload: locationUrl });
+  fetch(locationUrl).then(response =>
+    response
+      .json()
+      .then((json) => {
+        // dispatch success action and build url for next API call
+        dispatch({ type: REQUEST_SUCCEEDED, payload: json });
+        const newApiUrl = `http://api.openweathermap.org/data/2.5/weather?appid=938c02687efb071eb7aab8b854b0d392&q=${json.city},${json.countryCode}`;
+        dispatch({ type: REQUEST_STARTED, payload: locationUrl });
+        return newApiUrl;
+      })
+      // using newly built url call final data from weather API
+      .then(weatherApiUrl =>
+        fetch(weatherApiUrl)
+          .then(locationData => locationData.json())
+          .then(json => dispatch({ type: REQUEST_SUCCEEDED, payload: json }))
+          .catch(error => dispatch({ type: REQUEST_FAILED, error })),
+      )
+      // in case of failed location action
+      .catch(error => dispatch({ type: REQUEST_FAILED, error })),
+  );
 };
