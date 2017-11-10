@@ -20,7 +20,7 @@ class Home extends React.Component {
           <div className="panel-heading">
             <h3 className="panel-title">Welcome Will</h3>
           </div>
-          <div className="panel-body">
+          <div className="panel-body home">
             <LocationData {...this.props} />
             <MyMapComponent
               isMarkerShown
@@ -38,9 +38,11 @@ class Home extends React.Component {
 
 const MyMapComponent = withScriptjs(
   withGoogleMap(props => (
-    <GoogleMap defaultZoom={8} defaultCenter={{ lat: 48.15, lng: 17.1167 }}>
-      {props.isMarkerShown && <Marker position={{ lat: 48.15, lng: 17.1167 }} />}
-    </GoogleMap>
+    <div className="home__map">
+      <GoogleMap defaultZoom={8} defaultCenter={{ lat: 48.15, lng: 17.1167 }}>
+        {props.isMarkerShown && <Marker position={{ lat: 48.15, lng: 17.1167 }} />}
+      </GoogleMap>
+    </div>
   )),
 );
 

@@ -15,7 +15,7 @@ button:disabled {
 
 .db-leadspace.jumbotron {
   padding-bottom: 5px;
-  max-height: 500px;
+  max-height: 400px;
   -webkit-transition: max-height 0.8s;
   -moz-transition: max-height 0.8s;
   transition: max-height 0.8s; }
@@ -70,3 +70,17 @@ button:disabled {
   margin-top: 30px; }
   .panel strong {
     color: yellow; }
+  .panel p {
+    color: white;
+    font-size: 0.9em; }
+
+.home {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.home__map,
+.home__locationData {
+  width: 40%; }
