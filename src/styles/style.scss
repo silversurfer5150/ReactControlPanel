@@ -97,7 +97,7 @@ button:disabled {
   }
   p {
     color: white;
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
 }
 
@@ -112,4 +112,12 @@ button:disabled {
 .home__map,
 .home__locationData {
   width: 40%;
+  flex-grow: 2;
+}
+
+.home__clock {
+  flex-grow: 1;
+  p {
+    margin: 20px;
+  }
 }

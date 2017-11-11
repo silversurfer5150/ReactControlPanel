@@ -72,7 +72,7 @@ button:disabled {
     color: yellow; }
   .panel p {
     color: white;
-    font-size: 0.9em; }
+    font-size: 0.95em; }
 
 .home {
   display: flex;
@@ -83,4 +83,10 @@ button:disabled {
 
 .home__map,
 .home__locationData {
-  width: 40%; }
+  width: 40%;
+  flex-grow: 2; }
+
+.home__clock {
+  flex-grow: 1; }
+  .home__clock p {
+    margin: 20px; }

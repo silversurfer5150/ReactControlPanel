@@ -3,7 +3,7 @@ import { getCelciusFromKelvin } from '../containers/utils';
 
 const LocationData = props =>
   props.homeData.weather !== undefined ? (
-    <div className="home__locationData">
+    <div>
       <h4>Location Data</h4>
       <p>
         City: <strong>{props.homeData.name}</strong>
